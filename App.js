@@ -25,8 +25,6 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
-  console.log('Welcome to C308 Lesson 04 quiz!');
-  console.log('Your component here')
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -42,13 +40,22 @@ const App: () => React$Node = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Set Pickup Time</Text>
+              <Text style={styles.sectionTitle}>Life Changing Food @ RP</Text>
               <Text style={styles.sectionDescription}>
-                Set a time you would like us to arrive at your pickup location.
+                <Text style={styles.highlight}>IndoMee</Text> is a must-try
+                stall whenever you're in Republic Polytechnic. It has variety of
+                dishes and sides available, but the most popular dish is
+                definitely the famous Indomee Cutlet.
               </Text>
+              <Text style={styles.sectionLevel}>Location: W6, Level 3</Text>
+            </View>
+            <View style={styles.sectionContainer}>
               <Text style={styles.sectionDescription}>
-                <Text style={styles.highlight}>RP Furniture Shop</Text>
+                <Text style={styles.highlight}>Pastry & Bakery Stall</Text> has
+                many different kind of pastries and baked goods that are a must
+                try. The cream puffs there are the popular option among all.
               </Text>
+              <Text style={styles.sectionLevel}>Location: W6, Level 3</Text>
             </View>
           </View>
         </ScrollView>
@@ -81,6 +88,11 @@ const styles = StyleSheet.create({
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
+    color: Colors.dark,
+  },
+  sectionLevel: {
+    fontSize: 16,
+    fontWeight: '700',
     color: Colors.dark,
   },
   highlight: {
